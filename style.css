@@ -10,7 +10,7 @@
 /* Barra de navegación */
 
 .navbar {
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: #f1f1f2;
     
     
@@ -60,11 +60,17 @@
 
 }
 
- /* @media screen and(min-width: 950px) {
-     #hide {
-        display: none;
+    @media screen and (max-width: 650px) {
+     .headline {
+         font-size: 1rem;
     }
-}  */
+    .headline2 {
+        font-size: 1rem;
+    }
+    
+}  
+
+    
 
 @media screen and (max-width: 400px) {
     .overlay p {
@@ -119,7 +125,7 @@ background-color: #f1f1f2;
 }
 
 .seccion-texto {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .btn-info {
@@ -158,9 +164,8 @@ background-color: #f1f1f2;
 
 .headline {
     position: absolute;
-    top: 40%;
+     top: 40%;
     left: 35%;
-    font-size: 45px;
     transform: translate(-20%, 70%);
     color: aliceblue;
     z-index: 3;
@@ -170,7 +175,6 @@ background-color: #f1f1f2;
     position: absolute;
     top: 47%;
     left: 55%;
-    font-size: 45px;
     transform: translate(-20%, 70%);
     color: aliceblue;
     z-index: 3;
