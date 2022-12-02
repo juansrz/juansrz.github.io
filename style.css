@@ -10,13 +10,14 @@
 /* Barra de navegación */
 
 .navbar {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #f1f1f2;
     
     
 }
 
 .navbar-collapse {
+    
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
@@ -42,7 +43,7 @@
 
 /* Adaptable (Responsivo) */
 
-@media screen and(max-width: 767px) {
+@media screen and (max-width: 767px) {
     .navbar-brand {
         display: none;
     }
@@ -367,6 +368,51 @@ background-color: #f1f1f2;
 .articulos .card-header {
     font-weight: bold;
 
+}
+
+.articulos .container {
+    margin: 20px;
+    padding: 30px;
+}
+
+.accordion-button {
+font-size: 15px;
+background-color: #f1f1f2;
+color: #584e4e;
+font-weight: bold;
+
+
+}
+
+.accordion-item {
+    border: 2px solid #f1f1f2;
+   
+}
+
+
+.accordion-button:not(.collapsed) {
+    font-size: 25px;
+    font-weight: bold;
+    background: #004f92;
+    color: #f1f1f2;
+    font-family: 'Saira Condensed',cursive;
+    border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(100%);
+
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+.accordion-body {
+    background-color: #f1f1f2;
+    border: 3px solid #004f92;
+    border-radius: 10px;
+    color: #584e4e;
 }
 
 /* Testimonios */
