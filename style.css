@@ -30,7 +30,7 @@
     font-size: 20px;
     text-align: center;
     font-family: 'Saira Condensed', cursive;
-    
+    transition: all 0.4s ease;
 }
 
 .nav-link:hover {
@@ -87,6 +87,35 @@
         max-width: 600px;
     }
     
+}
+
+@media screen and (max-width: 600px) {
+    #pop_up.active {
+        width: 400px;
+        padding: 15px;
+        box-shadow: 0 5px 30px black;
+        background: #0a0a23;
+        border-radius: 20px;
+    }
+    #pop_up {
+        width: 400px;
+        padding: 15px;
+        
+        
+    }
+    #pop_uptwo.active {
+        width: 400px;
+        padding: 15px;
+        box-shadow: 0 5px 30px black;
+        background: #0a0a23;
+        border-radius: 20px;
+    }
+    #pop_uptwo {
+        width: 400px;
+        padding: 15px;
+        
+        
+    }
 }
 /* estilos generales */
 
@@ -350,7 +379,8 @@ background-color: #f1f1f2;
 }
 
 
-/* Experiencia */
+/* Viaje personal */
+
 
 /* Articulos */
 
@@ -359,15 +389,178 @@ background-color: #f1f1f2;
     padding: 30px;
 }
 
+.odisea {
+    gap: 50px;
+}
+.btn-info-odisea {
+    color: #0a0a23;
+    font-size: 1.3rem;
+    margin: 20px;
+    background-color: #f1f1f2;
+    font-family: 'Rubik Dirt', cursive;
+    gap: 20px;
+}
+
+.btn-info-odisea i {
+    margin: 10px;
+ }
+    
+
+.btn-info-odisea:hover {
+    background-color: #0a0a23;
+    color: #f1f1f2;
+}
+
+
 .articulos .card {
     width: 80%;
     max-width: 600px;
     margin: 20px;
+    
 }
 
+/* prueba popup */
+
+/* .pop-up {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+} */
+
+#pop_up {
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px black;
+    background: #004f92;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#pop_up.active {
+    
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.pop-up a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition:  all 0.2s ease-in;
+}
+
+.pop-up i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+
+}
+
+.pop-up a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.pop-up a:hover i {
+    color: black;
+}
+
+/* Pop up two */
+
+#pop_uptwo {
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px black;
+    background: #004f92;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#pop_uptwo.active {
+    
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.pop-uptwo a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition:  all 0.2s ease-in;
+}
+
+.pop-uptwo i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+
+}
+
+.pop-uptwo a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.pop-uptwo a:hover i {
+    color: black;
+}
+/* .show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.pop-uptwo {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.show2 {
+    pointer-events: auto;
+    opacity: 1;
+} */
+
+.wtf#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* final */
 .articulos .card-header {
     font-weight: bold;
 
+}
+
+.card-body  {
+    background: #0a0a23;
+    border-radius: 25px;
 }
 
 .articulos .container {
@@ -375,18 +568,32 @@ background-color: #f1f1f2;
     padding: 30px;
 }
 
+/* .odisea {
+    background-color: aqua;
+} */
+
+
+
 .accordion-button {
 font-size: 15px;
-background-color: #f1f1f2;
-color: #584e4e;
+background-color: #004f92;
+color: black;
 font-weight: bold;
+transition: all 0.8s ease;
 
 
 }
 
+
 .accordion-item {
-    border: 2px solid #f1f1f2;
-   
+    
+    border: 2px solid #004f92;
+    
+}
+
+.accordion-button:hover {
+    background-color: #0a0a23;
+    color: #f1f1f2;
 }
 
 
@@ -403,6 +610,7 @@ font-weight: bold;
     filter: brightness(0%) invert(100%);
 
 }
+
 
 .accordion-button:focus {
     box-shadow: inherit;
@@ -589,4 +797,50 @@ footer {
     font-size: 15px;
     color: #aeaeae;
     padding: 20px;
+}
+
+/* Barra desplazamiento */
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: #f1f1f2;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aeaeae;
+    border-radius: 5px;
+    border: 2px solid #f1f1f2;
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004f92;
+    border-radius: 15px;
+    border: 2px solid #f1f1f2;
+    
+}
+
+/* Scroll to Top */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    font-size: 30px;
+    color: #004f92;
+    background: #f1f1f2;
+    border: 2px solid #004f92;
+    transition: bottom 0.3s, transform 0.3s, background 0.4s;
+    display: inline-flex;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-0.25rem);
+    background-color: #0a0a23;
+    border: 2px solid #f1f1f2;
 }

@@ -316,113 +316,489 @@
           <!-- Seccion con acordeon -->
 
           <section id="educacion" class="articulos justify-content-start seccion-oscura">
-            <h2 class="seccion-titulo text-white">Educación</h2>
-            
-              <div class="container">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
+            <!-- efecto blur -->
+  <div class="wtf" id="blur">
+            <h2 class="seccion-titulo text-white text-center">Educación</h2>
+            <!-- Con JavaScript -->
+
+            <div class="container">
+            <div class="odisea text-center">
+            <button class="btn btn-info-odisea" onclick="toggle()" type="button" id="open">Educación<i class="bi bi-mortarboard-fill"></i></button> 
+            <button class="btn btn-info-odisea" onclick="toggle2()" type="button" id="opentwo">Experiencia<i class="bi bi-briefcase-fill"></i></button>
+          
+            </div>
+          </div>
+        </div>
+            <div class="pop-up container "id="pop_up">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Educación Secundaria Obligatoria 
-                  </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Educación Secundaria Obligatoria 
+                    </button>
                   </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>C.P.E.I.P.S Santa María Micaela</strong>
-                  Las Palmas de Gran Canaria de 2007 a 2011
-                </div>
-                </div>
-                </div>
-                <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Bachillerato
-                </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>C.P.E.S Nuestra Señora del Pilar</strong>
-                  Las Palmas de Gran Canaria de 2007 a 2011
-                </div>
-                </div>
-                </div>
-                 <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Ciclo Formativo Grado Superior
-                </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>C.E.S Juan Pablo II</strong> 
-                  Madrid de 2015 a 2017
-                </div>
-                </div>
-                </div>
-                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Part 66/B1.1-B2 License Modules
-                </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-
-                  <!-- <div class="container"> -->
-                    <div class="row align-items-center">
-                      <div class="col col-12 col-md-6 col-lg-4">
-                        <ul>
-                          <li>Module 1 <strong>'Mathematics'</strong></li>
-                          <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
-                          <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
-                        </ul>
-
-                      </div>
-                      <div class="col col-12 col-md-6 col-lg-4">
-                        <ul>
-                          <li>Module 5 <strong>'Digital techniques'</strong></li>
-                          <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
-                          <li>Module 9A <strong>'Human factors'</strong></li>
-                        </ul>
-                      </div>
-                      <div class="col col-12 col-md-6 col-lg-4">
-                        <ul>
-                          <li>Module 17A <strong>'Propeller'</strong></li>
-                        </ul>
-                      </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>C.P.E.I.P.S Santa María Micaela</strong>
+                          Las Palmas de Gran Canaria de 2007 a 2011
                     </div>
-                  
-                </div>
-                </div>
-                </div>
-                <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Grado en Ingeniería de la Ciberseguridad
-                </button>
-                </h2>
-               <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Universidad Rey Juan Carlos</strong>
-                   Madrid de 2018 a la actualidad
-                </div>
-                </div>
-                </div>
-                <div class="accordion-item">
-               <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  Ciberseguridad Full Stack BootCamp
-                </button>
-                 </h2>
-                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Keepcoding</strong> 
-                  Madrid de 2021 a 2022
-                </div>
+                    </div>
+                    </div>
+              <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Bachillerato
+              </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>C.P.E.S Nuestra Señora del Pilar</strong>
+                Las Palmas de Gran Canaria de 2007 a 2011
+              </div>
+              </div>
+              </div>
+               <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Ciclo Formativo Grado Superior
+              </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>C.E.S Juan Pablo II</strong> 
+                Madrid de 2015 a 2017
+              </div>
+              </div>
+              </div>
+               <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Part 66/B1.1-B2 License Modules
+              </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                
+                  <div class="row align-items-center">
+                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                      <ul>
+                        <li>Module 1 <strong>'Mathematics'</strong></li>
+                        <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
+                        <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
+                      </ul>
+
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                      <ul>
+                        <li>Module 5 <strong>'Digital techniques'</strong></li>
+                        <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
+                        <li>Module 9A <strong>'Human factors'</strong></li>
+                      </ul>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                      <ul>
+                        <li>Module 17A <strong>'Propeller'</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                
+              </div>
+              </div>
+              </div>
+              <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Grado en Ingeniería de la Ciberseguridad
+              </button>
+              </h2>
+             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Universidad Rey Juan Carlos</strong>
+                 Madrid de 2018 a la actualidad
+              </div>
+              </div>
+              </div>
+              <div class="accordion-item">
+             <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Ciberseguridad Full Stack BootCamp
+              </button>
+               </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Keepcoding</strong> 
+                Madrid de 2021 a 2022
               </div>
             </div>
           </div>
         </div>
+        <!-- <div class="icono-close align-items-center justify-content-center"> -->
+        <a class="align-items-center justify-content-center" onclick="toggle()">
+          <i class="bi bi-x-circle-fill"></i>
+        </a>
+      <!-- </div> -->
+                <!-- <button class="btn btn-info-odisea" onclick="toggle()" type="button" id="close"><i class="bi bi-x-circle-fill"></i></button> -->
+          </div>
+          <div class="pop-uptwo container"id="pop_uptwo">
+            <!-- <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Educación Secundaria Obligatoria 
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>C.P.E.I.P.S Santa María Micaela</strong>
+                        Las Palmas de Gran Canaria de 2007 a 2011
+                  </div>
+                  </div>
+                  </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Bachillerato
+            </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>C.P.E.S Nuestra Señora del Pilar</strong>
+              Las Palmas de Gran Canaria de 2007 a 2011
+            </div>
+            </div>
+            </div>
+             <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Ciclo Formativo Grado Superior
+            </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>C.E.S Juan Pablo II</strong> 
+              Madrid de 2015 a 2017
+            </div>
+            </div>
+            </div>
+             <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Part 66/B1.1-B2 License Modules
+            </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              
+                <div class="row align-items-center">
+                  <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                    <ul>
+                      <li>Module 1 <strong>'Mathematics'</strong></li>
+                      <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
+                      <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
+                    </ul>
+
+                  </div>
+                  <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                    <ul>
+                      <li>Module 5 <strong>'Digital techniques'</strong></li>
+                      <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
+                      <li>Module 9A <strong>'Human factors'</strong></li>
+                    </ul>
+                  </div>
+                  <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                    <ul>
+                      <li>Module 17A <strong>'Propeller'</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              
+            </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Grado en Ingeniería de la Ciberseguridad
+            </button>
+            </h2>
+           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Universidad Rey Juan Carlos</strong>
+               Madrid de 2018 a la actualidad
+            </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+           <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Ciberseguridad Full Stack BootCamp
+            </button>
+             </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Keepcoding</strong> 
+              Madrid de 2021 a 2022
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="icono-close align-items-center justify-content-center"> -->
+      <a class="align-items-center justify-content-center" onclick="toggle2()">
+        <i class="bi bi-x-circle-fill"></i>
+      </a>
+        </div>
+      
+  
+                <!-- Trabajo final -->
+
+
+              <!-- <div class="container "> -->
+                <!-- <p class="odisea text-center">
+                    
+                  <button class="btn btn-info-odisea" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"  aria-expanded="false" aria-controls="multiCollapseExample1" >Educación<i class="bi bi-mortarboard-fill"></i></button> 
+                  <button class="btn btn-info-odisea" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Experiencia<i class="bi bi-briefcase-fill"></i></button>
+                </p>
+                <div class="modal-container" id="modal_container">
+                <div class="row  ">
+                  <div class="col ">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1" style="text-align: -webkit-center;">
+                      <div class="card card-body">
+                        <button type="button" onclick="closepopup()">ok</button>
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Educación Secundaria Obligatoria 
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>C.P.E.I.P.S Santa María Micaela</strong>
+                                    Las Palmas de Gran Canaria de 2007 a 2011
+                              </div>
+                              </div>
+                              </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Bachillerato
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>C.P.E.S Nuestra Señora del Pilar</strong>
+                          Las Palmas de Gran Canaria de 2007 a 2011
+                        </div>
+                        </div>
+                        </div>
+                         <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Ciclo Formativo Grado Superior
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>C.E.S Juan Pablo II</strong> 
+                          Madrid de 2015 a 2017
+                        </div>
+                        </div>
+                        </div>
+                         <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Part 66/B1.1-B2 License Modules
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+        
+                          
+                            <div class="row align-items-center">
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 1 <strong>'Mathematics'</strong></li>
+                                  <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
+                                  <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
+                                </ul>
+        
+                              </div>
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 5 <strong>'Digital techniques'</strong></li>
+                                  <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
+                                  <li>Module 9A <strong>'Human factors'</strong></li>
+                                </ul>
+                              </div>
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 17A <strong>'Propeller'</strong></li>
+                                </ul>
+                              </div>
+                            </div>
+                          
+                        </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Grado en Ingeniería de la Ciberseguridad
+                        </button>
+                        </h2>
+                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Universidad Rey Juan Carlos</strong>
+                           Madrid de 2018 a la actualidad
+                        </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                       <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Ciberseguridad Full Stack BootCamp
+                        </button>
+                         </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Keepcoding</strong> 
+                          Madrid de 2021 a 2022
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+
+
+
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2" style="text-align: -webkit-center;">
+                      <div class="card card-body">
+                        
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Educación Secundaria Obligatoria 
+                          </button>
+                          </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>C.P.E.I.P.S Santa María Micaela</strong>
+                          Las Palmas de Gran Canaria de 2007 a 2011
+                        </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Bachillerato
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>C.P.E.S Nuestra Señora del Pilar</strong>
+                          Las Palmas de Gran Canaria de 2007 a 2011
+                        </div>
+                        </div>
+                        </div>
+                         <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Ciclo Formativo Grado Superior
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>C.E.S Juan Pablo II</strong> 
+                          Madrid de 2015 a 2017
+                        </div>
+                        </div>
+                        </div>
+                         <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Part 66/B1.1-B2 License Modules
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+        
+                          
+                            <div class="row align-items-center">
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 1 <strong>'Mathematics'</strong></li>
+                                  <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
+                                  <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
+                                </ul>
+        
+                              </div>
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 5 <strong>'Digital techniques'</strong></li>
+                                  <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
+                                  <li>Module 9A <strong>'Human factors'</strong></li>
+                                </ul>
+                              </div>
+                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
+                                <ul>
+                                  <li>Module 17A <strong>'Propeller'</strong></li>
+                                </ul>
+                              </div>
+                            </div>
+                          
+                        </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Grado en Ingeniería de la Ciberseguridad
+                        </button>
+                        </h2>
+                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Universidad Rey Juan Carlos</strong>
+                           Madrid de 2018 a la actualidad
+                        </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                       <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Ciberseguridad Full Stack BootCamp
+                        </button>
+                         </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Keepcoding</strong> 
+                          Madrid de 2021 a 2022
+                        </div>
+                      </div>
+                    </div>
+                        </div>
+                
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+        </div>  -->
+        <!-- </div> -->
+
+        <!-- Trabajo final llega aqui -->
+
+
+      
         </section>
 
     <!-- Testimonios -->
@@ -528,7 +904,7 @@
     <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
       <img class="footer-logo" src="imagenes cv/Ciberseguridad.svg" alt="logo de portafolio">
       <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Creemos un proyecto juntos</p>
-      <div class="iconos-redes-sociales d-flex flex-wrap align-items-cente justify-content-center">
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
         <a href="" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-twitter"></i>
         </a>
@@ -548,6 +924,9 @@
       <div class="derechos-de-autor">Creado por Juan Antonio Suárez Suárez &#169;</div>
     </footer>
 
+    <!-- Boton Scroll to Top -->
+
+    <button class="scroll-to-top"><i class="bi bi-arrow-up-short"></i></button>
     
 
     <!-- Scripts -->
@@ -563,7 +942,7 @@
     <script src="app.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
+  
 </body>
 
 </html>
