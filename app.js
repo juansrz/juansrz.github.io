@@ -52,7 +52,7 @@ function toggle2() {
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
     var pop_uptwo = document.getElementById('pop_uptwo');
-    pop_up.classList.toggle('active');
+    pop_uptwo.classList.toggle('active');
     
     
 };

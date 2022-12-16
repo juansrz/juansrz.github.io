@@ -89,34 +89,46 @@
     
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 500px) {
     #pop_up.active {
-        width: 400px;
+        width: 500px;
         padding: 15px;
         box-shadow: 0 5px 30px black;
         background: #0a0a23;
         border-radius: 20px;
     }
-    #pop_up {
-        width: 400px;
-        padding: 15px;
-        
-        
-    }
+    
+
     #pop_uptwo.active {
-        width: 400px;
+        width: 500px;
         padding: 15px;
         box-shadow: 0 5px 30px black;
         background: #0a0a23;
         border-radius: 20px;
-    }
-    #pop_uptwo {
-        width: 400px;
-        padding: 15px;
-        
-        
     }
 }
+
+@media screen and (max-width: 600px) {
+    .btn-info-odisea {
+        font-size: 1rem;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .scroll-to-top {
+        bottom: 55px;
+        right: 15px;
+    }
+    
+}
+@media screen and (max-width: 426px) {
+    .viaje-personal {
+        max-width: 260px;
+    }
+    
+}
+
 /* estilos generales */
 
 section {
@@ -385,6 +397,7 @@ background-color: #f1f1f2;
 /* Articulos */
 
 .articulos {
+    
     min-height: 500px;
     padding: 30px;
 }
@@ -392,13 +405,16 @@ background-color: #f1f1f2;
 .odisea {
     gap: 50px;
 }
+
+
 .btn-info-odisea {
     color: #0a0a23;
-    font-size: 1.3rem;
+    font-size: 19px;
     margin: 20px;
     background-color: #f1f1f2;
     font-family: 'Rubik Dirt', cursive;
     gap: 20px;
+    transition: 0.5s;
 }
 
 .btn-info-odisea i {
@@ -430,23 +446,32 @@ background-color: #f1f1f2;
     
     
 } */
+.viaje-personal {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #pop_up {
-    width: 600px;
-    padding: 50px;
+    position: absolute;
     box-shadow: 0 5px 30px black;
-    background: #004f92;
+    background: #0a0a23;
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
+    z-index: -1;
+    transform: translateY(300px);
 }
 
 #pop_up.active {
-    
+    padding: 15px;
     visibility: visible;
     opacity: 1;
-    transition: 0.2s;
+    transition: 1s;
     border-radius: 20px;
+    z-index: 1;
+    transform: translateY(-60px);
 }
 
 .pop-up a {
@@ -481,21 +506,25 @@ background-color: #f1f1f2;
 /* Pop up two */
 
 #pop_uptwo {
-    width: 600px;
-    padding: 50px;
+    position: absolute;
+    min-width: 300px;
     box-shadow: 0 5px 30px black;
-    background: #004f92;
+    background: #0a0a23;
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
+    z-index: -1;
+    transform: translateY(300px);
 }
 
 #pop_uptwo.active {
-    
+    padding: 15px;
     visibility: visible;
     opacity: 1;
-    transition: 0.2s;
+    transition: 1s;
     border-radius: 20px;
+    z-index: 1;
+    transform: translateY(-60px);
 }
 
 .pop-uptwo a {
@@ -546,11 +575,12 @@ background-color: #f1f1f2;
     opacity: 1;
 } */
 
-.wtf#blur.active {
+.viaje-personal#blur.active {
     filter: blur(20px);
     pointer-events: none;
     user-select: none;
 }
+
 
 /* final */
 .articulos .card-header {
@@ -576,19 +606,16 @@ background-color: #f1f1f2;
 
 .accordion-button {
 font-size: 15px;
-background-color: #004f92;
+background-color: #f1f1f2;
 color: black;
-font-weight: bold;
-transition: all 0.8s ease;
-
+transition: all 0.8s ease-out;
+font-family: 'Anton',cursive;
 
 }
 
 
 .accordion-item {
-    
-    border: 2px solid #004f92;
-    
+    border-top-right-radius: 2px solid #004f92;
 }
 
 .accordion-button:hover {
@@ -836,7 +863,8 @@ footer {
     background: #f1f1f2;
     border: 2px solid #004f92;
     transition: bottom 0.3s, transform 0.3s, background 0.4s;
-    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-to-top:hover {
