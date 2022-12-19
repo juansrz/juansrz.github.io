@@ -471,7 +471,7 @@ background-color: #f1f1f2;
     transition: 1s;
     border-radius: 20px;
     z-index: 1;
-    transform: translateY(-60px);
+    transform: translateY(-40px);
 }
 
 .pop-up a {
@@ -524,7 +524,7 @@ background-color: #f1f1f2;
     transition: 1s;
     border-radius: 20px;
     z-index: 1;
-    transform: translateY(-60px);
+    transform: translateY(-40px);
 }
 
 .pop-uptwo a {
