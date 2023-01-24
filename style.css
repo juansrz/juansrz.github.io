@@ -108,6 +108,13 @@
     }
 }
 
+@media screen and (min-width: 768px ) {
+    .carousel-item.active {
+        width: 800px;
+        
+    }
+}
+
 @media screen and (max-width: 600px) {
     .btn-info-odisea {
         font-size: 1rem;
@@ -394,7 +401,7 @@ background-color: #f1f1f2;
 /* Viaje personal */
 
 
-/* Articulos */
+/* Pop-up */
 
 .articulos {
     
@@ -435,17 +442,6 @@ background-color: #f1f1f2;
     
 }
 
-/* prueba popup */
-
-/* .pop-up {
-    display: flex;
-    opacity: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    
-} */
 .viaje-personal {
     
     display: flex;
@@ -555,6 +551,7 @@ background-color: #f1f1f2;
 .pop-uptwo a:hover i {
     color: black;
 }
+
 /* .show {
     pointer-events: auto;
     opacity: 1;
@@ -597,10 +594,6 @@ background-color: #f1f1f2;
     margin: 20px;
     padding: 30px;
 }
-
-/* .odisea {
-    background-color: aqua;
-} */
 
 
 
@@ -671,6 +664,7 @@ font-family: 'Anton',cursive;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .testimonio-imagen {
@@ -689,8 +683,8 @@ font-family: 'Anton',cursive;
 
 .testimonio-texto {
     max-width: 70%;
-    font-size: 20px;
-    text-align: center;
+    font-size: 1.2rem;
+    
     font-family: 'Marhey', cursive
 }
 
@@ -705,6 +699,7 @@ font-family: 'Anton',cursive;
 
 .testimonio-footer .cliente {
     font-size: 1.2rem;
+    margin: 20px;
 }
 
 .testimonio-info .cargo {
