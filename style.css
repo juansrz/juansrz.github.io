@@ -280,6 +280,7 @@ background-color: #f1f1f2;
 .sobre-mi {
     height: 500px;
     padding: 10%;
+    justify-content: space-around;
 }
 
 .sobre-mi .contenedor {
