@@ -1,929 +1,904 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="scroll-smooth">
 <head>
-  <!-- metadata -->
     <meta charset="UTF-8">
-    <meta name="author" content="Juan Antonio Suárez Suárez">
-    <meta name="description" content="Portafolio de Juan Suárez">
-    <meta name="keywords" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Antonio Suárez Suárez">
+    <meta name="description" content="Portfolio Profesional - Ingeniería de Ciberseguridad">
+    <title>Juan Suárez | Cyber Security Engineer</title>
     
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Iconos de bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    
-    <!-- css -->
-    <link rel="stylesheet" href="./style.css">
-   
-    <!-- titulo -->
-    <title>Juan Suárez | Ciberseguridad</title>
-    
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="imagenes cv/logotop.png">
-    
-    <!-- google fonts -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Marhey&family=Nerko+One&family=Quicksand:wght@500&family=Rubik+Dirt&family=Saira+Condensed&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Configuración Tailwind Extendida -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#172033', 
+                            900: '#0f172a', 
+                            950: '#020617', 
+                        },
+                        accent: {
+                            primary: '#38bdf8',
+                            glow: 'rgba(56, 189, 248, 0.5)',
+                            secondary: '#818cf8', 
+                            
+                            blue: '#38bdf8',
+                            green: '#10b981',
+                            red: '#ef4444',
+                            teal: '#2dd4bf',  
+                            violet: '#a78bfa',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-<body>
-  <!-- Barra navegacion -->  
-  <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-toggler">
-        <a class="navbar-brand" href="#Hola"><img src="./imagenes cv/Ciberseguridad.png" width="100" alt="Logo de Juan"></a>
-        <ul class="navbar-nav d-flex justify-content-center align-items-center">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#sobre-mi">Sobre mi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#proyectos">Proyecto/hands on</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#educacion">Mi Camino</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#experiencia">Otros datos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#contacto">Contacto</a>
-          </li>
-        </ul>
+    <style>
+        /* Global Styles & Reset */
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
         
-      </div>
-    </div>
-  </nav>
+        
+        .glass-card { 
+            background: rgba(30, 41, 59, 0.4); 
+            backdrop-filter: blur(8px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+
+       
+        .glass-card:hover { 
+            background: rgba(30, 41, 59, 0.6);           
+            border-color: rgba(56, 189, 248, 0.4);      
+            transform: translateY(-4px);                 
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.1); 
+        }
+        
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+      
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
     
-<!-- Seccion Hero -->
+        .timeline-container {
+            position: relative;
+        }
         
-        <section  class="section s1 ">
-            <div id="" class="hero d-flex ">
-                <img src="./imagenes cv/vecteezy_liquify-colorful-abstract-background-wallpaper_7046719_760.jpg" alt="Foto Portada">
-              
-                <h1 class="headline">Juan Antonio</h1>
-                <h1 class="headline2">Suárez Suárez </h1>
-                
-                
-            </div>
-        </section>
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: linear-gradient(to bottom, 
+                rgba(14, 165, 233, 0) 0%, 
+                rgba(14, 165, 233, 0.5) 15%, 
+                rgba(14, 165, 233, 0.5) 85%, 
+                rgba(14, 165, 233, 0) 100%
+            );
+            transform: translateX(-50%);
+            z-index: 0;
+        }
 
-        <!-- introduccion -->
-        <section id="Hola" class="section-Introduccion align-items-stretch">
-            <div class="introduccion d-flex flex-column justify-content-center align-items-center">
-                <img class="Imagen-Perfil" src="/imagenes cv/iconofotojuan.svg" alt="foto de Juan" >
-                <h1>Hola, soy Juan Suárez</h1>
-                <h2>Ciberseguridad</h2>
-            </div>
-            <div class="introduccion-inferior d-flex flex-column justify-content-center align-items-center">
-                <img class="introduccion-inferior-imagen img-fluid" src="imagenes cv/introduccioninferior.svg" alt="Candado,mail,pop-up...">
-            </div>
-          </section>
+      
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
 
-               
-        <!-- Sobre mi -->
-        <section id="sobre-mi" class="sobre-mi seccion-oscura">
-            <div class="contenedor">
-                <h2 class="seccion-titulo text-white">Conoce a Juan Suárez</h2>
-                <p class="seccion-texto text-white">En busca de mejorar mis habilidades en un entorno dinámico. Actualmente estudio
-                  Ingeniería de la Ciberseguridad y estoy trabajando en Mercadona. Serenidad
-                  emotiva con capacidad de razonamiento y fundamentación, enfocado y dedicado.
-                  Buen ojo para los detalles y pongo todo mi esfuerzo para mejorar día a día.</p>
-                
-
-                  <a class="contacto" href="/imagenes cv/JASS-CV-2023.pdf" target="_blank" rel="noopener noreferrer">
-                    <button type="button">
-                      Curriculum Vitae
-                      <i class="bi bi-cloud-arrow-down-fill"></i>
-                    </button>
-                  </a>
-
-            </div>
-        </section>
-
-        <!-- Educación -->
-        <section class="educacion seccion-clara">
-          <div class="container text-center">
-            <div class="row">
-              <!-- Ciberseguridad -->
-              <div class="columna col-12 col-md-4">
-                <i class="bi bi-laptop"></i>
-                <p class="educacion-titulo">Ciberseguridad</p>
-                <p>La ciberseguridad es un campo apasionante debido a la variedad de desafíos y problemas que presenta. </p>
-                <div class="badges-contenedor">
-                  <span class="badge badge-color text-bg-light">Pentesting</span>
-                  <span class="badge text-bg-light">Red Team</span>
-                  <span class="badge text-bg-light">Blue Team</span>
-                  
-                </div>
-              </div>
-              <!-- Trabajos -->
-              <div class="columna col-12 col-md-4">
-                <i class="bi bi-person-workspace"></i>
-                <p class="educacion-titulo">Trabajos</p>
-                <p>Estoy interesado en iniciar un nuevo trabajo en el campo de la ciberseguridad para poder aplicar mis habilidades
-                   y conocimientos en un entorno laboral.</p>
-                <div class="badges-contenedor">
-                  <span class="badge text-bg-light">HTB</span>
-                  
-                </div>
-              </div>
-              <!-- Estudios -->
-              <div class="columna col-12 col-md-4">
-                <i class="bi bi-mortarboard"></i>
-                <p class="educacion-titulo">Estudios</p>
-                <p>La ciberseguridad es un campo en constante evolución, por lo que 
-                  es importante estar constantemente actualizado en las últimas técnicas y tendencias para poder proteger adecuadamente los sistemas 
-                  y datos.</p>
-                <div class="badges-contenedor">
-                  <span class="badge text-bg-light">Universidad</span>
-                  <span class="badge text-bg-light">Ciclo Superior</span>
-                  <span class="badge text-bg-light">BootCamp</span>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <!-- Proyectos -->
-        <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
-          <h2 class="seccion-titulo texto-negro text-center">Mis proyectos recientes</h2>
-          <h3 class="seccion-descripcion text-center">Estos son algunos proyectos que he creado recientemente...</h3>
-          <!-- Galeria de Proyectos -->
-          <div class="container text-center proyectos-contenedor">
-            <div class="row">
-              <!-- Proyecto 1 -->
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/HTML-image.png" alt="Proyecto 1">
-                  <div class="overlay">
-                    <p>Proyecto 1</p>
-                     <div class="iconos-contenedor">
-                       <a href="https://github.com/juansrz/juansrz.github.io" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="https://juansrz.github.io/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-laptop"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-               <!-- Proyecto 2 -->
-               <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/HTB-image.png" alt="Proyecto 2">
-                  <div class="overlay">
-                    <p>Proyecto 2</p>
-                     <div class="iconos-contenedor">
-                       <a href="https://github.com/juansrz/Pentest/blob/fdf571c17825e5ed91cf74b0a0432a121cfeecc5/Carpediem/reporteCarpediem.pdf" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="imagenes cv/reporte.pdf" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-filetype-pdf"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-               <!-- Proyecto 3 -->
-               <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/HTB-image.png" alt="Proyecto 3">
-                  <div class="overlay">
-                    <p>Proyecto 3</p>
-                     <div class="iconos-contenedor">
-                       <a href="https://github.com/juansrz/Pentest/blob/fdf571c17825e5ed91cf74b0a0432a121cfeecc5/Return/reporteReturn.pdf" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="imagenes cv/reporteReturn.pdf" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-filetype-pdf"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-               <!-- Proyecto 4 --
-               <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/" alt="Proyecto 1">
-                  <div class="overlay">
-                    <p>Próximamente</p>
-                     <div class="iconos-contenedor">
-                       <a href="" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-laptop"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div> 
-               < Proyecto 5 >
-               <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/" alt="Proyecto 1">
-                  <div class="overlay">
-                    <p>Próximamente</p>
-                     <div class="iconos-contenedor">
-                       <a href="" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-laptop"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-               < Proyecto 6 >
-               <div class="col-12 col-md-6 col-lg-4">
-                <div class="proyecto">
-                  <img src="imagenes cv/" alt="Proyecto 1">
-                  <div class="overlay">
-                    <p>Próximamente</p>
-                     <div class="iconos-contenedor">
-                       <a href="" target="_blank" rel="noopener noreferrer"> 
-                        <i class="bi bi-github"></i>
-                      </a>
-                      <a href="" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-laptop"></i>
-                      </a>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div> -->
-            </div>
-          </div>
-          <!-- <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-          <button type="button" class="btn btn-info">
-            Ver más proyectos
-            <i class="bi bi-arrow-right-circle-fill"></i>
-          </button>
-        </a> -->
+   
+        ::selection {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+        }
         
-        </section>
+        /* Mobile Timeline Adjustments */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 24px;
+                transform: translateX(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-sky-500/30">
 
-        <!-- Articulo -->
+    <!-- Canvas Background -->
+    <canvas id="canvas-bg"></canvas>
 
-        <!-- <section id="articulos" class="articulos justify-content-start seccion-oscura">
-          <h2 class="seccion-titulo texto-negro">Articulos</h2>
-          <div class="card">
-            <div class="card-header">
-              Más recientes
-            </div>
-            <ul class="list-group list-group-flush">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <li class="list-group-item">Cualquier cosa</li>
-            </a>
-            </ul>
-          </div>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-            <button type="button" class="btn btn-info">
-              Ver más articulos
-              <i class="bi bi-arrow-right-circle-fill"></i>
-            </button>
-          </a> -->
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <span class="font-mono text-xl font-bold text-slate-100 group-hover:text-sky-400 transition-colors duration-300">&lt;JS/&gt;</span>
+                </div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#sobre-mi" class="text-sm font-medium text-slate-400 hover:text-sky-400 transition-colors duration-300">Sobre mí</a>
+                        <a href="#habilidades" class="text-sm font-medium text-slate-400 hover:text-sky-400 transition-colors duration-300">Habilidades</a>
+                        <a href="#trayectoria" class="text-sm font-medium text-slate-400 hover:text-sky-400 transition-colors duration-300">Trayectoria</a>
+                        <a href="#proyectos" class="text-sm font-medium text-slate-400 hover:text-sky-400 transition-colors duration-300">Proyectos</a>
+                        <a href="#contacto" class="px-5 py-2.5 rounded-lg bg-sky-500/10 border border-sky-500/50 text-sky-400 hover:bg-sky-500 hover:text-white transition-all duration-300 text-sm font-medium shadow-[0_0_15px_rgba(56,189,248,0.15)] hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
 
-          <!-- Seccion con acordeon -->
-
-          <section id="educacion" class="articulos justify-content-start seccion-oscura">
-            <!-- efecto blur -->
-  <div class="viaje-personal text-center" id="blur">
-            <h2 class="seccion-titulo text-white text-center">Mi Camino</h2>
-            <!-- Con JavaScript -->
-
-            <div class="container">
-            <div class="odisea text-center">
-            <button class="btn btn-info-odisea" onclick="toggle()" type="button" id="open">Educación<i class="bi bi-mortarboard-fill"></i></button> 
-            <button class="btn btn-info-odisea" onclick="toggle2()" type="button" id="opentwo">Experiencia<i class="bi bi-briefcase-fill"></i></button>
-          
-            </div>
-          </div>
-        </div>
-            <div class="pop-up"id="pop_up">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      Educación Secundaria Obligatoria 
+                <!-- Mobile Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-lg"></i>
                     </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>C.P.E.I.P.S Santa María Micaela</strong>
-                          Las Palmas de Gran Canaria de 2007 a 2011
-                    </div>
-                    </div>
-                    </div>
-              <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Bachillerato
-              </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>C.P.E.S Nuestra Señora del Pilar</strong>
-                Las Palmas de Gran Canaria de 2007 a 2011
-              </div>
-              </div>
-              </div>
-               <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Ciclo Formativo Grado Superior
-              </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>C.E.S Juan Pablo II</strong> 
-                Madrid de 2015 a 2017
-              </div>
-              </div>
-              </div>
-               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Part 66/B1.1-B2 License Modules
-              </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-
-                
-                  <div class="row align-items-center">
-                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                      <ul>
-                        <li>Module 1 <strong>'Mathematics'</strong></li>
-                        <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
-                        <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
-                      </ul>
-
-                    </div>
-                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                      <ul>
-                        <li>Module 5 <strong>'Digital techniques'</strong></li>
-                        <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
-                        <li>Module 9A <strong>'Human factors'</strong></li>
-                      </ul>
-                    </div>
-                    <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                      <ul>
-                        <li>Module 17A <strong>'Propeller'</strong></li>
-                      </ul>
-                    </div>
-                  </div>
-                
-              </div>
-              </div>
-              </div>
-              <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Grado en Ingeniería de la Ciberseguridad
-              </button>
-              </h2>
-             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Universidad Rey Juan Carlos</strong>
-                 Madrid de 2018 a la actualidad
-              </div>
-              </div>
-              </div>
-              <div class="accordion-item">
-             <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                Ciberseguridad Full Stack BootCamp
-              </button>
-               </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Keepcoding</strong> 
-                Madrid de 2021 a 2022
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="icono-close d-flex align-items-center justify-content-center">
-        <a class="close " onclick="toggle()">
-          <i class="bi bi-x-circle-fill"></i>
-        </a>
-      </div>
-     </div>
-          <div class="pop-uptwo "id="pop_uptwo">
-            <div class="accordion" id="accordionExperiencia">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingprimero">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseprimero" aria-expanded="false" aria-controls="collapseprimero">
-                    Iberia Maintenance
-                  </button>
-                </h2>
-                <div id="collapseprimero" class="accordion-collapse collapse" aria-labelledby="headingprimero" data-bs-parent="#accordionExperiencia">
-                  <div class="accordion-body">
-                    <strong>Técnico de mantenimiento de aeronaves</strong>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden glass-nav absolute w-full border-b border-slate-800" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#sobre-mi" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" onclick="toggleMobileMenu()">Sobre mí</a>
+                <a href="#habilidades" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" onclick="toggleMobileMenu()">Habilidades</a>
+                <a href="#trayectoria" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" onclick="toggleMobileMenu()">Trayectoria</a>
+                <a href="#proyectos" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" onclick="toggleMobileMenu()">Proyectos</a>
+                <div class="pt-2">
+                    <a href="#contacto" class="block w-full text-center px-3 py-3 rounded-md text-base font-medium bg-sky-500/10 text-sky-400 border border-sky-500/30" onclick="toggleMobileMenu()">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        
+        <!-- Ambient Light Effects -->
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-sky-600/10 rounded-full blur-[100px] animate-pulse-slow pointer-events-none"></div>
+        <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] animate-pulse-slow pointer-events-none" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center z-10">
+            
+            <!-- Text Content -->
+            <div class="order-2 md:order-1 space-y-8 fade-in-up">
+                
+                <div>
+                    <h2 class="font-mono text-sky-400 text-lg mb-2 tracking-wide">> Hola, soy</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+                       
+                        Juan Antonio <br class="hidden lg:inline" />
+                      
+                        <span class="text-[#38bdf8] drop-shadow-[0_0_10px_rgba(56,189,248,0.3)]">
+                            Suárez Suárez
+                        </span>
+                    </h1>
+                </div>
+
+                <div class="h-8 flex items-center">
+                    <p class="text-xl md:text-2xl text-slate-400 font-mono flex items-center">
                         
-                          <div class="Iberia">
-                            
-                              <ul>
-                                <li><p>Taller de componentes</p></li>
-                                <li><p>Mantenimiento pesado en hangar</p></li>
-                                <li><p>Taller de motores</p></li>
-                              </ul>
-        
-                            
-                            
-                  </div>
-                  </div>
-                  </div>
-              </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header" id="headingsegundo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesegundo" aria-expanded="false" aria-controls="collapsesegundo">
-              Mercadona S.A
-            </button>
-            </h2>
-            <div id="collapsesegundo" class="accordion-collapse collapse" aria-labelledby="headingsegundo" data-bs-parent="#accordionExperiencia">
-            <div class="accordion-body">
-              <strong>Gerente de perecederos</strong>
-              <div class="Mercadona">
-                
-                  <ul>
-                    <li><p>Funciones administrativas. </p></li>
-                    <li><p>Prescripción de productos.</p></li>
-                    <li><p>Control de calidad.</p></li>
-                    <li><p>Gestión de equipos.</p></li>
-                    
-                  </ul>
-
+                        <span class="text-sky-500 mr-3">></span>
+                        <span id="typing-text"></span>
+                        <span class="animate-pulse text-sky-400 ml-1">_</span>
+                    </p>
+                </div>
                 
                 
-            </div>
-            </div>
-            </div>
-      
-      </div>
-      <div class="icono-close d-flex align-items-center justify-content-center">
-      <a class="align-items-center justify-content-center" onclick="toggle2()">
-        <i class="bi bi-x-circle-fill"></i>
-      </a>
-          </div>
-        </div>
-          </div>
-          
-      
-  
-                <!-- Trabajo final alternativo -->
-
-
-              <!-- <div class="container "> -->
-                <!-- <p class="odisea text-center">
-                    
-                  <button class="btn btn-info-odisea" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"  aria-expanded="false" aria-controls="multiCollapseExample1" >Educación<i class="bi bi-mortarboard-fill"></i></button> 
-                  <button class="btn btn-info-odisea" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Experiencia<i class="bi bi-briefcase-fill"></i></button>
+                <p class="text-lg text-slate-400 max-w-lg leading-relaxed border-l-2 border-slate-700 pl-6">
+                    Estudiante de <strong class="text-slate-200 font-semibold">Ingeniería de la Ciberseguridad</strong> enfocado en seguridad tanto defensiva como ofensiva. Practico en laboratorios académicos y CTFs.
                 </p>
-                <div class="modal-container" id="modal_container">
-                <div class="row  ">
-                  <div class="col ">
-                    <div class="collapse multi-collapse" id="multiCollapseExample1" style="text-align: -webkit-center;">
-                      <div class="card card-body">
-                        <button type="button" onclick="closepopup()">ok</button>
-                        <div class="accordion" id="accordionExample">
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Educación Secundaria Obligatoria 
-                              </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <strong>C.P.E.I.P.S Santa María Micaela</strong>
-                                    Las Palmas de Gran Canaria de 2007 a 2011
-                              </div>
-                              </div>
-                              </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Bachillerato
-                        </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>C.P.E.S Nuestra Señora del Pilar</strong>
-                          Las Palmas de Gran Canaria de 2007 a 2011
-                        </div>
-                        </div>
-                        </div>
-                         <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Ciclo Formativo Grado Superior
-                        </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>C.E.S Juan Pablo II</strong> 
-                          Madrid de 2015 a 2017
-                        </div>
-                        </div>
-                        </div>
-                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Part 66/B1.1-B2 License Modules
-                        </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-        
-                          
-                            <div class="row align-items-center">
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 1 <strong>'Mathematics'</strong></li>
-                                  <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
-                                  <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
-                                </ul>
-        
-                              </div>
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 5 <strong>'Digital techniques'</strong></li>
-                                  <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
-                                  <li>Module 9A <strong>'Human factors'</strong></li>
-                                </ul>
-                              </div>
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 17A <strong>'Propeller'</strong></li>
-                                </ul>
-                              </div>
-                            </div>
-                          
-                        </div>
-                        </div>
-                        </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Grado en Ingeniería de la Ciberseguridad
-                        </button>
-                        </h2>
-                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>Universidad Rey Juan Carlos</strong>
-                           Madrid de 2018 a la actualidad
-                        </div>
-                        </div>
-                        </div>
-                        <div class="accordion-item">
-                       <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                          Ciberseguridad Full Stack BootCamp
-                        </button>
-                         </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>Keepcoding</strong> 
-                          Madrid de 2021 a 2022
-                        </div>
-                      </div>
+
+                <div class="flex flex-wrap gap-4 pt-4 font-mono text-sm">
+                   
+                    <a href="#proyectos" class="group px-8 py-4 rounded bg-sky-500/10 border border-sky-500/50 text-sky-400 font-bold transition-all hover:bg-sky-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] flex items-center gap-3">
+                        ./VER_PROYECTOS <i class="fas fa-terminal group-hover:rotate-12 transition-transform"></i>
+                    </a>
+                   
+                    <a href="imagenes cv/CV_2025V2.pdf" target="_blank" class="px-8 py-4 rounded border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-white transition-all hover:-translate-y-1 flex items-center gap-3">
+                        DESCARGAR_CV <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="pt-6 flex gap-6 text-slate-500">
+                    <a href="https://github.com/juansrz" target="_blank" class="hover:text-white transition-all hover:-translate-y-1 hover:scale-110"><i class="fab fa-github text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/jasrz/" target="_blank" class="hover:text-sky-400 transition-all hover:-translate-y-1 hover:scale-110"><i class="fab fa-linkedin text-2xl"></i></a>
+                    
+                    <a href="mailto:juan_srz95@hotmail.com" class="hover:text-red-400 transition-all hover:-translate-y-1 hover:scale-110"><i class="fas fa-envelope text-2xl"></i></a>
+                   
+                    <a href="https://app.hackthebox.com/profile/1110809" target="_blank" class="hover:text-green-500 transition-all hover:-translate-y-1 hover:scale-110" title="Hack The Box Profile"><i class="fas fa-cube text-2xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Visual Content -->
+            <div class="order-1 md:order-2 flex justify-center relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 animate-float">
+                    <!-- Image Container  -->
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-slate-800 shadow-[0_0_50px_rgba(56,189,248,0.15)] relative z-10 group bg-slate-900">
+                       
+                        <div class="absolute inset-0 bg-sky-500/10 group-hover:bg-transparent transition-colors duration-500 z-20 mix-blend-overlay"></div>
+                        
+                        <!-- Imagen -->
+                        <img src="imagenes cv/Juan_srz.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Juan+Suarez&background=0f172a&color=38bdf8&size=512&font-size=0.33'" 
+                             alt="Juan Suárez" 
+                             class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700">
                     </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-600">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden group">
                 
+                <!-- Decoration -->
+                <div class="absolute top-6 right-6 md:top-8 md:right-8 pointer-events-none select-none z-0 opacity-30 group-hover:opacity-60 transition-all duration-500">
+                    <div class="relative border-2 border-dashed border-sky-500/30 rounded-lg p-3 transform rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                        <i class="fas fa-fingerprint text-6xl md:text-7xl text-sky-400"></i>
+                        <!-- Etiqueta decorativa inferior -->
+                        <div class="absolute -bottom-2.5 left-1/2 transform -translate-x-1/2 bg-slate-900 px-2 text-[10px] font-mono text-sky-500/70 tracking-widest border border-sky-500/20 rounded">
+                            BIO-AUTH
+                        </div>
+                    </div>
+                </div>
 
+                <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+                    
+                    <!-- Visual Side  -->
+                    <div class="md:col-span-5 flex justify-center">
+                         <div class="relative aspect-square w-full max-w-[280px] bg-slate-900/60 rounded-xl border border-slate-700 p-6 flex items-center justify-center shadow-2xl backdrop-blur-sm">
+                            <!-- Corner Accents  -->
+                            <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-sky-500 rounded-tl-lg"></div>
+                            <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-sky-500 rounded-tr-lg"></div>
+                            <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-sky-500 rounded-bl-lg"></div>
+                            <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-sky-500 rounded-br-lg"></div>
+                            
+                            <!-- Icon/Image Container -->
+                             <div class="relative w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                              
+                                 <div class="text-sky-400/80 animate-float">
+                                    <i class="fas fa-shield-halved text-9xl drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]"></i>
+                                 </div>
+                            </div>
+                            
+                            
+                            <div class="absolute top-4 right-5 font-mono text-[10px] text-emerald-400 flex items-center gap-2 bg-emerald-500/10 px-2 py-1 rounded border border-emerald-500/20">
+                                <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div> ACTIVE
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Content Side -->
+                    <div class="md:col-span-7">
+                         <div class="flex items-center gap-4 mb-8">
+                            <span class="text-sky-400 font-mono text-xl">01.</span>
+                            <h2 class="text-3xl font-bold text-white">Perfil Profesional</h2>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                Futuro <strong class="text-white font-semibold">Ingeniero de la Ciberseguridad</strong> (URJC) enfocado en la seguridad ofensiva y defensiva. Capaz de desplegar infraestructuras de monitorización <span class="text-sky-300 font-mono text-sm bg-sky-500/10 px-2 py-1 rounded border border-sky-500/20">Wazuh + ELK</span>, realizar análisis de vulnerabilidades en código (Java/Spring) y ejecutar técnicas avanzadas de reversing y explotación (radare2, ROP).
+                            </p>
+                            
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                Autodidacta y proactivo: desarrollo scripts de automatización propios y entreno continuamente en <span class="text-emerald-400 font-medium border-b border-emerald-500/30">Hack The Box</span>. Abierto a distintas áreas técnicas donde seguir aprendiendo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section  -->
+    <section id="habilidades" class="py-24 bg-slate-900/50 relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 reveal">
+                <span class="text-accent-blue font-mono text-2xl">02.</span> Tech Stack & Herramientas
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Terminal Window -->
+                <div class="terminal-window rounded-lg overflow-hidden bg-[#1e1e1e] font-mono text-sm reveal md:col-span-2 shadow-2xl border border-slate-700">
+                    
+                    <!-- KALI LINUX HEADER STYLE -->
+                    <div class="terminal-header relative px-4 py-2.5 flex items-center justify-between bg-[#2d3748] border-b border-slate-700 shadow-md">
+                        
+                        <!-- Left: App Icons -->
+                        <div class="flex items-center gap-2">
+                            <!-- Terminal Icon -->
+                            <div class="w-8 h-8 bg-[#0f172a] rounded flex items-center justify-center border border-slate-600 shadow-lg relative group cursor-default transition-all hover:border-slate-500" title="Terminal - Active">
+                                <i class="fas fa-terminal text-slate-300 text-xs group-hover:text-emerald-400 transition-colors"></i>
+                                <!-- Active Indicator Dot -->
+                                <div class="absolute -bottom-[2px] w-3 h-[2px] bg-emerald-500 rounded-full shadow-[0_0_5px_#10b981]"></div>
+                            </div>
+                            
+                            <!-- Divider -->
+                            <div class="h-5 w-[1px] bg-slate-600/50 mx-1"></div>
+
+                            <!-- New Tab Icon -->
+                            <div class="w-8 h-8 bg-slate-700/30 rounded flex items-center justify-center border border-transparent hover:border-slate-500 hover:bg-slate-600/50 transition-all cursor-pointer text-slate-400 hover:text-white group" title="New Tab">
+                                <i class="fas fa-plus text-xs group-hover:scale-110 transition-transform"></i>
+                            </div>
+                        </div>
 
                       
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample2" style="text-align: -webkit-center;">
-                      <div class="card card-body">
-                        
-                        <div class="accordion" id="accordionExample">
-                          <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Educación Secundaria Obligatoria 
-                          </button>
-                          </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>C.P.E.I.P.S Santa María Micaela</strong>
-                          Las Palmas de Gran Canaria de 2007 a 2011
+                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <span class="text-slate-200 text-xs font-bold tracking-wide drop-shadow-md font-mono">juan@kali: ~</span>
                         </div>
-                        </div>
-                        </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Bachillerato
-                        </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>C.P.E.S Nuestra Señora del Pilar</strong>
-                          Las Palmas de Gran Canaria de 2007 a 2011
-                        </div>
-                        </div>
-                        </div>
-                         <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Ciclo Formativo Grado Superior
-                        </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>C.E.S Juan Pablo II</strong> 
-                          Madrid de 2015 a 2017
-                        </div>
-                        </div>
-                        </div>
-                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Part 66/B1.1-B2 License Modules
-                        </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-        
-                          
-                            <div class="row align-items-center">
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 1 <strong>'Mathematics'</strong></li>
-                                  <li>Module 3 <strong>'Electrical fundamentals'</strong></li>
-                                  <li>Module 4 <strong>'Electronic Fundamental'</strong></li>
-                                </ul>
-        
-                              </div>
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 5 <strong>'Digital techniques'</strong></li>
-                                  <li>Module 8 <strong>'Basic aerodinamics'</strong></li>
-                                  <li>Module 9A <strong>'Human factors'</strong></li>
-                                </ul>
-                              </div>
-                              <div class="col col-12 col-md-6 col-lg-4 col-sm-3">
-                                <ul>
-                                  <li>Module 17A <strong>'Propeller'</strong></li>
-                                </ul>
-                              </div>
+
+                       
+                        <div class="flex items-center gap-3">
+                            <!-- Tools -->
+                            <i class="fas fa-search text-slate-400 text-xs hover:text-white cursor-pointer transition-colors"></i>
+                            <i class="fas fa-ellipsis-v text-slate-400 text-xs hover:text-white cursor-pointer transition-colors mr-2"></i>
+                            
+                            <!-- Buttons -->
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-slate-500/50 hover:bg-slate-400 transition-colors"></div> <!-- Minimize -->
+                                <div class="w-3 h-3 rounded-full bg-slate-500/50 hover:bg-slate-400 transition-colors"></div> <!-- Maximize -->
+                                <!-- Close Button -->
+                                <div class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition-colors cursor-pointer shadow-lg shadow-blue-500/20 border border-blue-400/30">
+                                    <i class="fas fa-times text-[10px] text-white"></i>
+                                </div>
                             </div>
-                          
                         </div>
-                        </div>
-                        </div>
-                        <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Grado en Ingeniería de la Ciberseguridad
-                        </button>
-                        </h2>
-                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>Universidad Rey Juan Carlos</strong>
-                           Madrid de 2018 a la actualidad
-                        </div>
-                        </div>
-                        </div>
-                        <div class="accordion-item">
-                       <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                          Ciberseguridad Full Stack BootCamp
-                        </button>
-                         </h2>
-                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>Keepcoding</strong> 
-                          Madrid de 2021 a 2022
-                        </div>
-                      </div>
                     </div>
+                    
+                    <div class="p-6 space-y-6 text-slate-300">
+                        
+                        <!-- Command 1: Offensive Security -->
+                        <div>
+                            <p class="text-accent-green font-bold">➜  ~ <span class="text-white font-normal">cat offensive-security.txt</span></p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 pl-4">
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-bug text-accent-red"></i> AFL++ (Fuzzing)</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-dna text-accent-red"></i> Radare2</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-spider text-accent-red"></i> Burp Suite</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-memory text-accent-red"></i> ROPgadget</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-code-branch text-accent-red"></i> Shellcode</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-network-wired text-accent-red"></i> Nmap/Wireshark</div>
+                            </div>
                         </div>
-                
 
-                      </div>
+                        <!-- Command 2: Blue Team & Tools -->
+                        <div>
+                            <p class="text-accent-green font-bold">➜  ~ <span class="text-white font-normal">ls -la ./defensive-tools/</span></p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 pl-4">
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-shield-virus text-accent-blue"></i> Wazuh + Elastic</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-check-double text-accent-blue"></i> SonarQube</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-file-contract text-accent-blue"></i> Log Parsing</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-lock text-accent-blue"></i> Hardening Linux</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-key text-accent-blue"></i> YARA / Regex</div>
+                            </div>
+                        </div>
+
+                        <!-- Command 3: Development -->
+                        <div>
+                            <p class="text-accent-green font-bold">➜  ~ <span class="text-white font-normal">ls -la ./development/</span></p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 pl-4">
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fab fa-cuttlefish text-yellow-400"></i> C / C++</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fab fa-java text-yellow-400"></i> Java</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fab fa-python text-yellow-400"></i> Python</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fab fa-docker text-yellow-400"></i> Docker</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fab fa-git-alt text-yellow-400"></i> Git</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-terminal text-yellow-400"></i> Bash Scripting</div>
+                                <div class="flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-file-alt text-yellow-400"></i> LaTeX</div>
+                            </div>
+                        </div>
+
+                        <!-- Command 4: System Status -->
+                        <div>
+                            <p class="text-accent-green font-bold">➜  ~ <span class="text-white font-normal">./sys_info --status</span></p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-3 pl-4">
+                                <div class="flex items-center gap-3 text-slate-300 hover:text-sky-300 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-sky-500"></i> 
+                                    <span>Madrid, ES</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-slate-300 hover:text-emerald-300 transition-colors">
+                                    <i class="fas fa-check-circle text-emerald-500"></i> 
+                                    <span>Disponible</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-slate-300 hover:text-yellow-300 transition-colors">
+                                    <i class="fas fa-language text-yellow-500"></i> 
+                                    <span>Inglés B2</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-slate-300 hover:text-purple-300 transition-colors">
+                                    <i class="fas fa-id-card text-purple-500"></i> 
+                                    <span>Carnet B/A1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="animate-pulse">
+                            <span class="text-accent-green font-bold">➜  ~</span> <span class="w-2.5 h-5 bg-slate-400 inline-block align-middle ml-1"></span>
+                        </div>
                     </div>
-                  </div>
                 </div>
-
-
-        </div>  -->
-        <!-- </div> -->
-
-        <!-- Trabajo final llega aqui -->
-
-
-      
-        </section>
-
-    <!-- Carousel -->
-    <section id="experiencia" class="testimonios seccion-clara">
-      <h2 class="seccion-titulo">Otros datos</h2>
-      <h3 class="seccion-descripcion text-center">Estos son otros datos importantes</h3>
-    
-      <!-- Carrusel -->
-      <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="4000">
-            <div class="container iconos-carusel">
-              <i class="bi bi-person-fill-add"></i>
-            
-              <div class="testimonio-info">
-                <div class="cliente badges-contenedor">
-                  <span class="badge text-bg-light">Wazuh</span>
-                  <span class="badge text-bg-light">ElasticSearch</span>
-                  <span class="badge text-bg-light">UTM</span>
-                  <span class="badge text-bg-light">Cisco</span>
-                </div>
-              </div>
-
             </div>
-          </div>
-
-          <div class="carousel-item "data-bs-interval="4000">
-            <div class="container iconos-carusel">
-              <i class="bi bi-translate"></i>
-              
-              <div class="testimonio-info">
-                <div class="cliente badges-contenedor">
-                  <span class="badge text-bg-light">Español nativo</span>
-                  <span class="badge text-bg-light">Ingles b2</span>
-                </div>
-                </div>
-
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <div class="container iconos-carusel">
-              <i class="bi bi-person-fill-gear"></i>
-              
-              <div class="testimonio-info">
-                
-                <div class="cliente badges-contenedor">
-                  <span class="badge text-bg-light">Sistemas operativos Linux</span>
-                  <span class="badge text-bg-light">Python</span>
-                  <span class="badge text-bg-light">HTML/CSS/JavaScript</span>
-                  <span class="badge text-bg-light">Latex</span>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <div class="container iconos-carusel">
-              <i class="bi bi-car-front-fill "></i>
-              
-              <div class="testimonio-info">
-              
-                <div class="cliente badges-contenedor">
-                  <span class="badge text-bg-light">Carnet de conducir tipo B/A1</span>
-                  <span class="badge text-bg-light">Vehículo propio</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-    
-    
-    
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="contacto seccion-oscura">
-      <div class="container">
-          <div class="container text-center rectangulo d-flex justify-content-evenly">
-            <div class="row">
-              <div class="col-12 col-md-4 seccion-titulo">
-                Hablemos
-              </div>
-              <div class="col-12 col-md-4 descripcion">
-                
-                 Mi pasión por esta área y mi motivación por aprender y crecer me lleva a buscar oportunidades 
-                 para desempeñarme en este sector. Si estás buscando a un candidato dispuesto a aprender y trabajar duro,
-                  no dudes en descargar mi currículum y ponerte en contacto conmigo.
-              </div>
-              <div class="col-12 col-md-4">
-                <a href="mailto:juan_srz95@hotmail.com">
-                  <button type="button">
-                    Contacto
-                    <i class="bi bi-envelope-check-fill"></i>
-                  </button>
-                </a>
-                <a href="/imagenes cv/JASS-CV-2023.pdf" target="_blank" rel="noopener noreferrer">
-                  <button type="button">
-                    Curriculum Vitae
-                    <i class="bi bi-cloud-arrow-down-fill"></i>
-                  </button>
-                </a>
-              </div>
-              
+    <!-- Trayectoria -->
+    <section id="trayectoria" class="py-32 bg-slate-900/50 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-16 fade-in-up">
+                <span class="text-accent-blue font-mono text-xl">03.</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Línea Temporal</h2>
+                <div class="h-px bg-slate-800 flex-1"></div>
             </div>
-          </div>
-      </div>
 
+            <div class="relative timeline-container">
+                <!-- Línea central -->
+                <div class="timeline-line"></div>
 
+                <!-- Item 1 -->
+                <div class="relative md:grid md:grid-cols-2 md:gap-16 mb-16 timeline-item group">
+                    
+                    <div class="text-right md:pr-4 fade-in-up">
+                        <div class="inline-block bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 mb-2 group-hover:border-accent-blue transition-colors">
+                            <span class="text-accent-blue font-mono font-bold text-sm">2018 - 2026</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Ingeniería de Ciberseguridad</h3>
+                        <p class="text-sm text-slate-400 font-mono mb-4">Universidad Rey Juan Carlos</p>
+                      
+                        <p class="text-slate-300 leading-relaxed text-sm p-4 rounded-lg glass-card cursor-default">
+                            Formación especializada en Metodologías de Desarrollo Seguro, Malware, IA y Sistemas Operativos.
+                        </p>
+                    </div>
+                    
+                    <!-- Icono Central -->
+                    <div class="absolute left-0 md:left-1/2 top-0 transform md:-translate-x-1/2 translate-y-4 z-10 pl-2 md:pl-0">
+                        <div class="w-12 h-12 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center shadow-xl group-hover:border-accent-blue group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-graduation-cap text-accent-blue text-lg"></i>
+                        </div>
+                    </div>
 
+                    <!-- Espacio Derecha  -->
+                    <div class="hidden md:block"></div>
+                </div>
 
+                <!-- Item 2 -->
+                <div class="relative md:grid md:grid-cols-2 md:gap-16 mb-16 timeline-item group">
+                    <div class="hidden md:block"></div>
+                    
+                    <!-- Icono Central -->
+                    <div class="absolute left-0 md:left-1/2 top-0 transform md:-translate-x-1/2 translate-y-4 z-10 pl-2 md:pl-0">
+                        <div class="w-12 h-12 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center shadow-xl group-hover:border-accent-teal group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-briefcase text-accent-teal text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Contenido Derecha -->
+                    <div class="pl-16 md:pl-4 text-left fade-in-up" style="transition-delay: 0.1s">
+                        <div class="inline-block bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 mb-2 group-hover:border-accent-teal transition-colors">
+                            <span class="text-accent-teal font-mono font-bold text-sm">2019 - 2024</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Gerente de Perecederos</h3>
+                        <p class="text-sm text-slate-400 font-mono mb-4">Mercadona S.A.</p>
+                        <!-- APLICADO .glass-card AQUÍ -->
+                        <p class="text-slate-300 leading-relaxed text-sm p-4 rounded-lg glass-card cursor-default">
+                            Gestión de inventario y reposición, coordinación de equipo y cumplimiento de estándares de calidad/seguridad operativa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative md:grid md:grid-cols-2 md:gap-16 mb-16 timeline-item group">
+                    <!-- Contenido Izquierda -->
+                    <div class="text-right md:pr-4 fade-in-up" style="transition-delay: 0.2s">
+                        <div class="inline-block bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 mb-2 group-hover:border-slate-500 transition-colors">
+                            <span class="text-slate-400 font-mono font-bold text-sm">2017 - 2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Técnico Mant. Aeronaves</h3>
+                        <p class="text-sm text-slate-400 font-mono mb-4">Iberia Maintenance</p>
+                        
+                        <p class="text-slate-300 leading-relaxed text-sm p-4 rounded-lg glass-card cursor-default">
+                            Inspección/desmontaje (p. ej., RB211), control de calidad en taller y hangar; cumplimiento estricto de checklists y normativa.
+                        </p>
+                    </div>
+                    
+                    <!-- Icono Central -->
+                    <div class="absolute left-0 md:left-1/2 top-0 transform md:-translate-x-1/2 translate-y-4 z-10 pl-2 md:pl-0">
+                        <div class="w-12 h-12 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center shadow-xl group-hover:border-slate-500 group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-plane text-slate-400 text-lg"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:block"></div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="relative md:grid md:grid-cols-2 md:gap-16 timeline-item group">
+                    <div class="hidden md:block"></div>
+                    
+                    <!-- Icono Central -->
+                    <div class="absolute left-0 md:left-1/2 top-0 transform md:-translate-x-1/2 translate-y-4 z-10 pl-2 md:pl-0">
+                        <div class="w-12 h-12 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center shadow-xl group-hover:border-accent-violet group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-microchip text-accent-violet text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Contenido Derecha -->
+                    <div class="pl-16 md:pl-4 text-left fade-in-up" style="transition-delay: 0.3s">
+                        <div class="inline-block bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 mb-2 group-hover:border-accent-violet transition-colors">
+                            <span class="text-accent-violet font-mono font-bold text-sm">2015 - 2017</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">C.F.G.S Mantenimiento Aviónica</h3>
+                        <p class="text-sm text-slate-400 font-mono mb-4">C.E.S Juan Pablo II</p>
+                       
+                        <p class="text-slate-300 leading-relaxed text-sm p-4 rounded-lg glass-card cursor-default">
+                            Formación técnica superior en sistemas electrónicos, navegación y control de aeronaves. Base sólida en hardware crítico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Pie de pagina/Footer -->
-    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-      <img class="footer-logo" src="imagenes cv/Ciberseguridad.svg" alt="logo de portafolio">
-      <p class="footer-texto text-center">Aprendiendo y creciendo<br><!--Creemos un proyecto juntos.--> en ciberseguridad.</p>
-      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-        <!-- <a href="" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-twitter"></i>
-        </a> -->
-        <a href="https://github.com/juansrz" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jasrz/" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="mailto:juan_srz95@hotmail.com" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-envelope"></i>
-        </a>
-        <!-- <a href="" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-instagram"></i>
-        </a> -->
-      </div>
-      <div class="derechos-de-autor">Creado por Juan Antonio Suárez Suárez &#169;</div>
+    <!-- Projects -->
+    <section id="proyectos" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Proyectos & Labs</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Selección de desarrollos técnicos enfocados en defensa, explotación y automatización.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Minishell (C) -->
+                <div class="group rounded-xl overflow-hidden glass-panel border-0 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-sky-900/20">
+                    <div class="relative h-48 overflow-hidden bg-slate-800 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                         <i class="fas fa-terminal text-6xl text-sky-500/50 group-hover:text-sky-400 transition-colors duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors">Minishell (C)</h3>
+                            <a href="https://github.com/juansrz/minishell-ssoo-uric" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 line-clamp-3">
+                            Shell tipo Unix con pipes/redirecciones y corpus de entradas (fuzzing corpus) para estrés de parsing (casos borde).
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-sky-500/10 text-sky-400 rounded text-xs font-mono">C/C++</span>
+                            <span class="px-2 py-1 bg-sky-500/10 text-sky-400 rounded text-xs font-mono">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: ROP + Shellcode -->
+                <div class="group rounded-xl overflow-hidden glass-panel border-0 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-sky-900/20">
+                     <div class="relative h-48 overflow-hidden bg-slate-800 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                         <i class="fas fa-bug text-6xl text-red-500/50 group-hover:text-red-400 transition-colors duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Exploit Dev: ROP Chain</h3>
+                            <a href="https://github.com/juansrz/malware-p3-rop-mprotect" target="_blank" class="text-slate-400 hover:text-emerald-400 transition-colors"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 line-clamp-3">
+                            Cadena ROP para invocar mprotect() y ejecutar shellcode desde nuevo stack. Extracción de gadgets con ROPgadget.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded text-xs font-mono">Assembly</span>
+                            <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded text-xs font-mono">Exploit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: CTF MDS & Automatización -->
+                <div class="group rounded-xl overflow-hidden glass-panel border-0 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-sky-900/20">
+                     <div class="relative h-48 overflow-hidden bg-slate-800 flex items-center justify-center">
+                         <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                         <i class="fas fa-robot text-6xl text-purple-500/50 group-hover:text-purple-400 transition-colors duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">CTF: Auto & PRNG</h3>
+                            <a href="https://github.com/juansrz/mds-practica2-ctf" target="_blank" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 line-clamp-3">
+                            Bots Selenium para retos web, explotación de PRNG (Java) y refactor/test seguro con JUnit 5+ Mockito.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 rounded text-xs font-mono">Java/Python</span>
+                            <span class="px-2 py-1 bg-indigo-500/10 text-indigo-400 rounded text-xs font-mono">Selenium</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            
+            <div class="mb-8 text-center">
+                <h3 class="text-white font-bold text-lg mb-2">Juan Antonio Suárez Suárez</h3>
+                <p class="text-slate-500 text-sm">Ingeniería de la Ciberseguridad</p>
+            </div>
+
+            <div class="flex space-x-8 mb-8">
+                <a href="https://github.com/juansrz" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/jasrz/" class="text-slate-400 hover:text-sky-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="mailto:juan_srz95@hotmail.com" class="text-slate-400 hover:text-red-400 transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+                <a href="https://app.hackthebox.com/profile/1110809" target="_blank" class="text-slate-400 hover:text-green-400 transition-colors" title="Hack The Box Profile"><i class="fas fa-cube text-xl"></i></a>
+            </div>
+
+            <div class="text-slate-600 text-xs font-mono">
+                &copy; <script>document.write(new Date().getFullYear())</script> Desarrollado con <i class="fas fa-code text-sky-500"></i>, <i class="fas fa-mug-hot text-amber-700"></i> y mucha pasión.
+            </div>
+        </div>
     </footer>
 
-    <!-- Boton Scroll to Top -->
-
-    <button class="scroll-to-top"><i class="bi bi-arrow-up-short"></i></button>
-    
-
     <!-- Scripts -->
+    <script>
+        // Navbar Scroll Blur Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.add('py-0');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.remove('py-2');
+            }
+        });
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.style.opacity = '1';
+                    menu.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                menu.style.opacity = '0';
+                menu.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
-        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        // Advanced Typing Effect 
+        const textElement = document.getElementById('typing-text');
+        const phrase = "Ingeniería de la Ciberseguridad";
+        let charIndex = 0;
 
-    <script src="app.js"></script>
+        function type() {
+            if (charIndex <= phrase.length) {
+                textElement.textContent = phrase.substring(0, charIndex);
+                charIndex++;
+                setTimeout(type, 100); 
+            }
+           
+        }
+        
+        
+        type();
+
+       
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        let particlesArray;
+
+        
+        let mouse = {
+            x: null,
+            y: null,
+            radius: 150 
+        };
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        
+        window.addEventListener('mouseout', () => {
+            mouse.x = undefined;
+            mouse.y = undefined;
+        });
+
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+
+        
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                
+              
+                this.speedX = (Math.random() * 0.5) - 0.25; 
+                this.speedY = (Math.random() * 0.5) - 0.25; 
+                this.size = Math.random() * 2 + 1; 
+                this.density = (Math.random() * 30) + 1;
+                this.color = 'rgba(56, 189, 248, 0.5)';
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            update() {
+                
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+             
+                if (this.x > canvas.width || this.x < 0) {
+                    this.speedX = -this.speedX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.speedY = -this.speedY;
+                }
+
+               
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                
+               
+                if (distance < mouse.radius) {
+                    const forceDirectionX = dx / distance;
+                    const forceDirectionY = dy / distance;
+                    const force = (mouse.radius - distance) / mouse.radius;
+                    
+                
+                    const repulsionStrength = 3;
+                    this.x -= forceDirectionX * force * repulsionStrength;
+                    this.y -= forceDirectionY * force * repulsionStrength;
+                }
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            
+            const numberOfParticles = (canvas.width * canvas.height) / 9000; 
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                particlesArray.push(new Particle(x, y));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].draw();
+                particlesArray[i].update();
+                
+         
+                for (let j = i; j < particlesArray.length; j++) {
+                    const dx = particlesArray[i].x - particlesArray[j].x;
+                    const dy = particlesArray[i].y - particlesArray[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        
+                        let opacityValue = 1 - (distance / 100);
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${opacityValue * 0.4})`; 
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+                        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
+        initParticles();
+        animate();
+    </script>
 </body>
-
 </html>
